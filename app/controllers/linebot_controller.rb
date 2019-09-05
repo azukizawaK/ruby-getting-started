@@ -32,18 +32,18 @@
                
                
                if event.message["text"] == "イコールラブ"
-                   message = [
+                   message = {
                        
                        type: "text",
                        text: "http://equal-love.jp/"
                        
-                       ]
+                   }
                    end
                    
                else
                    
                
-             message = [
+             message = {
                  (
                      type: "text",
                      text: @idols.name
@@ -57,7 +57,7 @@
                      originalContentUrl: @idols.photo,
                      previewImageUrl: @iodls.photo
                      )
-                     ]
+             }
                  end
              client.reply_message(event["replyToken"], message)
            end
