@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Idols</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Profile</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @idols.each do |idol| %>
+      <tr>
+        <td><%= idol.name %></td>
+        <td><%= idol.profile %></td>
+        <td><%= idol.photo %></td>
+        <td><%= link_to 'Show', idol %></td>
+        <td><%= link_to 'Edit', edit_idol_path(idol) %></td>
+        <td><%= link_to 'Destroy', idol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idol', new_idol_path %>
