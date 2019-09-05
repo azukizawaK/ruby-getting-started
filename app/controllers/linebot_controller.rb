@@ -43,21 +43,21 @@
                else
                    
                
-             message = {
-                 (
+             message = [
+                 {
                      type: "text",
                      text: @idols.name
-                 )
-                 (
+                 },
+                 {
                      type: "text",
                      text: @idols.profile
-                 )
-                 (
+                 },
+                 {
                      type: "image",
                      originalContentUrl: @idols.photo,
                      previewImageUrl: @iodls.photo
-                     )
-             }
+                 }
+             ]
                  end
              client.reply_message(event["replyToken"], message)
            end
