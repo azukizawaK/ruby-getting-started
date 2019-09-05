@@ -57,11 +57,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-<<<<<<< HEAD
+
   post '/callback' => 'linebot#callback'
-=======
-  
-  post '/callback' => 'linebot#callback'
-  
->>>>>>> d92e1ac64b736670f71ac35d2907eb4c4933b625
+
 end
