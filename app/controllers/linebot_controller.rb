@@ -48,7 +48,7 @@ def send(line_ids, message)
             content: {
                 contentType: ContentType::TEXT,
                 toType: ToType::USER,
-                text: @post.name #返事をPostから取ってくる。
+                text: @idol.name #返事をPostから取ってくる。
             },
 
             toChannel: TO_CHANNEL,
