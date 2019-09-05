@@ -11,52 +11,59 @@
        }
      end
      
-#     def callback
-#      body = request.body.read
-#   
-#       signature = request.env["HTTP_X_LINE_SIGNATURE"]
-#       unless client.validate_signature(body, signature)
-#         error 400 do "Bad Request" end
-#       end
+     def callback
+      body = request.body.read
+      
+      @idols = Idol.offset( rand(Idol.count) ).first #アイドルの情報
+     
    
-#       events = client.parse_events_from(body)
-#   
-#       events.each { |event|
-#         case event
-#         when Line::Bot::Event::Message
-#           case event.type
-#           when Line::Bot::Event::MessageType::Text
-#             message = {
-#               type: "text",
-#               text: event.message["text"] + "!"
-#             }
-#             client.reply_message(event["replyToken"], message)
-#           end
-#         end
-#       }
+       signature = request.env["HTTP_X_LINE_SIGNATURE"]
+       unless client.validate_signature(body, signature)
+         error 400 do "Bad Request" end
+       end
+  
+       events = client.parse_events_from(body)
    
+       events.each { |event|
+         case event
+         when Line::Bot::Event::Message
+           case event.type
+           when Line::Bot::Event::MessageType::Text
+               
+               
+               if event.message["text"] == "イコールラブ"
+                   message = [
+                       
+                       type: "text",
+                       text: "http://equal-love.jp/"
+                       
+                       ]
+                   end
+                   
+               else
+                   
+               
+             message = [
+                 (
+                     type: text,
+                     text: @idols.name
+                 )
+                 (
+                     type: text,
+                     text: @idols.profile
+                 )
+                 (
+                     type: image
+                     originalContentUrl: @idols.photo,
+                     previewImageUrl: @iodls.photo
+                     )
+                     ]
+                 end
+             client.reply_message(event["replyToken"], message)
+           end
+         end
+       }
    
-def send(line_ids, message)
-
-   @idol=Idol.offset( rand(Idol.count) ).first
-# Postからランダムで返事を選ぶ。
-
-
-    post('/v1/events', {
-
-            to: line_ids,
-            content: {
-                contentType: ContentType::TEXT,
-                toType: ToType::USER,
-                text: @idol.name #返事をPostから取ってくる。
-            },
-
-            toChannel: TO_CHANNEL,
-            eventType: EVENT_TYPE,
-
-
-
-        })
         
        head :ok
      end
