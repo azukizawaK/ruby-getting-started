@@ -45,15 +45,15 @@
                
              message = [
                  (
-                     type: text,
+                     type: "text",
                      text: @idols.name
                  )
                  (
-                     type: text,
+                     type: "text",
                      text: @idols.profile
                  )
                  (
-                     type: image
+                     type: "image",
                      originalContentUrl: @idols.photo,
                      previewImageUrl: @iodls.photo
                      )
