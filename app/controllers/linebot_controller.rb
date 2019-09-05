@@ -61,7 +61,6 @@
                  end
              client.reply_message(event["replyToken"], message)
            end
-         end
        }
    
         
