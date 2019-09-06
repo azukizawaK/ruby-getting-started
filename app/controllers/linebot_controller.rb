@@ -123,6 +123,15 @@
                    }
                    client.reply_message(event["replyToken"], message)
                    
+                   elsif event.message["text"] == "グッズ"
+                   message = {
+                       
+                       type: "text",
+                       text: "https://store.emtg.jp/equallove/products/list.php?category_id=1071"
+                   }
+                   client.reply_message(event["replyToken"], message)
+                   
+                   
                else
                    
                
