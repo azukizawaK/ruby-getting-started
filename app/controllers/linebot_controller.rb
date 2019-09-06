@@ -15,8 +15,6 @@
       body = request.body.read
       
       @idols = Idol.offset( rand(Idol.count) ).first #アイドルの情報
-      logger.debug(@idols)
-      logger.debug("あああああ")
       
      
    
@@ -58,7 +56,7 @@
                  {
                      type: "image",
                      originalContentUrl: @idols.photo,
-                     previewImageUrl: @iodls.photo
+                     previewImageUrl: @idols.photo
                  }
              ]
                 
