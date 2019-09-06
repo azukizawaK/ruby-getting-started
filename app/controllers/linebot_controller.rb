@@ -15,6 +15,9 @@
       body = request.body.read
       
       @idols = Idol.offset( rand(Idol.count) ).first #アイドルの情報
+      logger.debug(@idols)
+      logger.debug("あああああ")
+      
      
    
        signature = request.env["HTTP_X_LINE_SIGNATURE"]
