@@ -38,7 +38,6 @@
                        text: "http://equal-love.jp/"
                        
                    }
-                   end
                    
                else
                    
