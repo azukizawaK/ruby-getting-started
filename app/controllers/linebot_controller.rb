@@ -135,7 +135,11 @@
                    message = {
                        
                        type: "text",
-                       text: "おお！略称をご存じとは...！もしかして、あなたはもうイコラブの沼に生きる方ですね？"
+                       text: "おお！略称をご存じとは...！もしかして、あなたはもうイコラブの沼に生きる方ですね？
+                       そんなあなたには、こちらのアイドルもおすすめです！
+                       http://www.tacoyaki-rainbow.jp/index.html
+                       https://www.zoc.tokyo/
+                       https://www.shiritsuebichu.jp/official/pc/"
                    }
                    client.reply_message(event["replyToken"], message)
                    
