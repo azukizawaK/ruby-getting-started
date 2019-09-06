@@ -40,3 +40,4 @@ gem 'line-bot-api'
 
 # To use Linebot
 gem 'line-bot-api'
+gem 'rails_12factor'
