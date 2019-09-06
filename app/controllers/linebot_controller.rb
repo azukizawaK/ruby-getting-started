@@ -131,6 +131,14 @@
                    }
                    client.reply_message(event["replyToken"], message)
                    
+                   elsif event.message["text"] == "イコラブ"
+                   message = {
+                       
+                       type: "text",
+                       text: "おお！略称をご存じとは...！もしかして、あなたはもうイコラブの沼に生きる方ですね？"
+                   }
+                   client.reply_message(event["replyToken"], message)
+                   
                    
                else
                    
