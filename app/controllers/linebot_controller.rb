@@ -57,7 +57,7 @@
                      previewImageUrl: @iodls.photo
                  }
              ]
-                 end
+                # end
              client.reply_message(event["replyToken"], message)
            end
        }
