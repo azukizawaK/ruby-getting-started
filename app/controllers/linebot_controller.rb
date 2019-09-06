@@ -38,6 +38,7 @@
                        text: "http://equal-love.jp/"
                        
                    }
+                   client.reply_message(event["replyToken"], message)
                    
                else
                    
@@ -57,9 +58,10 @@
                      previewImageUrl: @iodls.photo
                  }
              ]
-                # end
+                
              client.reply_message(event["replyToken"], message)
            end
+       end
        }
    
         
