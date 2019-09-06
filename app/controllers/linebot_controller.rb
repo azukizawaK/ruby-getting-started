@@ -62,9 +62,10 @@
              client.reply_message(event["replyToken"], message)
            end
        end
+   end
+   
        }
        
        head :ok
-   end
      
  end
